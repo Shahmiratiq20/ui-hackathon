@@ -25,6 +25,7 @@ export default function RootLayout({
         <Navbar />
         {/* Render children passed to the layout */}
         {children}
+        <Footer />
       </body>
     </html>
   );
