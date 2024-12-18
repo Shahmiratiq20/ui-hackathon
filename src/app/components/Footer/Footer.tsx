@@ -1,51 +1,42 @@
 import Image from "next/image";
-import {FaFacebook} from "react-icons/fa"
+import { FaFacebook } from "react-icons/fa";
 import { RxInstagramLogo } from "react-icons/rx";
-import {FaLinkedin } from "react-icons/fa"
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
-    return (
-<div>
-<footer className="bg-[#EEEFFB] h-auto sm:h-[500px] md:h-[500px] py-8 text-[#8A8FB9] items-center">
+  return (
+    <div>
+      <footer className="bg-[#EEEFFB] py-8 text-[#8A8FB9]">
+        <div className="container mx-auto px-12">
 
-  <div className="container mx-auto px-12 items-center">
-
-    {/* Responsive Grid */}
-    <div className="mt-[94px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 text-center md:text-left lg:text-left">
+          {/* Footer Main Sections */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center md:text-left">
+            {/* Logo and Search Section */}
             <div className="mt-2 sm:mt-0">
-              
-          {/* Logo */}
-          <Image
-            src="/Hekto.png"
-            width={98}
-            height={34}
-            alt="logo"
-          />
+              <Image src="/Hekto.png" width={98} height={34} alt="logo" />
               <div className="mt-4 flex items-center gap-x-2 justify-center sm:justify-start">
-               
-                {/* Search */}
-                <div className="w-full bg-white rounded-md items-center flex">
+                {/* Search Bar and Sign Up Button */}
+                <div className="w-full bg-white rounded-md flex">
                   <input
                     className="w-[70%] h-11 p-1 bg-white text-black outline-none opacity-75"
                     type="search"
                     placeholder="Search"
                   />
-                  <button className="text-base font-medium w-[30%] h-[39px] bg-[#FB2E86] text-[#F3F9FF]">
+                  <button className="text-base font-medium w-[30%] h-11 bg-[#FB2E86] text-[#F3F9FF]">
                     Sign Up
                   </button>
                 </div>
               </div>
-
-              <p className="mt-4 text-xs leading-4 text-center sm:text-left">
+              <p className="mt-4 text-xs text-center sm:text-left">
                 Contact Info: <br />
                 17 Princess Road, London, Greater London NW1 8JR, UK
               </p>
             </div>
-  
+
             {/* Categories Section */}
             <div className="mt-4 leading-6">
               <h3 className="text-[18px] text-black">Categories</h3>
-              <ul className="mt-2 space-x-0 md:space-y-5 md:mb-6  text-sm">
+              <ul className="mt-2 space-y-2 text-sm">
                 <li>Laptops & Computers</li>
                 <li>Cameras & Photography</li>
                 <li>Smart Phones & Tablets</li>
@@ -53,7 +44,7 @@ const Footer = () => {
                 <li>Waterproof Headphones</li>
               </ul>
             </div>
-  
+
             {/* Customer Care Section */}
             <div className="mt-4 leading-6">
               <h3 className="text-[18px] text-black">Customer Care</h3>
@@ -65,7 +56,7 @@ const Footer = () => {
                 <li>Order Tracking</li>
               </ul>
             </div>
-  
+
             {/* Pages Section */}
             <div className="mt-4 leading-6">
               <h3 className="text-[18px] text-black">Pages</h3>
@@ -79,41 +70,40 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-  
-         
-
         </div>
-        </footer>
-{/* bottom */}
+      </footer>
 
-        <div className="bg-[#E7E4F8]  ">
-    <div className="container px-5  h-[80px] sm:h-[53px] mx-auto flex items-center sm:flex-row flex-col">
-      
-    <p className="text-sm text-[#9DA0AE] sm:ml-6 sm:mt-0 mt-4">
-        © 2024 Hekto —
-        <a
-          href="https://twitter.com/knyttnev"
-          rel="noopener noreferrer"
-          className="text-[#9DA0AE] ml-1"
-          target="_blank"
-        >
-          @Right Reserved
-        </a>
-      </p>
-      <span className="flex flex-row sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      {/* Bottom Section with Social Media and Copyright */}
+      <div className="bg-[#E7E4F8] py-4">
+        <div className="container px-5 mx-auto flex items-center justify-between sm:flex-row flex-col">
+          <p className="text-sm text-[#9DA0AE] sm:ml-6 sm:mt-0 mt-4">
+            © 2024 Hekto —{" "}
+            <a
+              href="https://twitter.com/knyttnev"
+              rel="noopener noreferrer"
+              className="text-[#9DA0AE] ml-1"
+              target="_blank"
+            >
+              @Right Reserved
+            </a>
+          </p>
 
-     <div className="w-5 h-5 " ><a href="#"><FaFacebook  /></a></div> 
-      <div className="w-5 h-5  ml-3 text-gray-900"><a href="#"><RxInstagramLogo /></a></div>
-        <div className="w-5 h-5  ml-3 text-gray-900"><a href="#"><FaLinkedin  /></a></div>
-
-    </span>
+          {/* Social Media Icons */}
+          <div className="flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-3">
+            <a href="#" className="text-gray-900 hover:text-[#FB2E86]">
+              <FaFacebook className="w-5 h-5" />
+            </a>
+            <a href="#" className="text-gray-900 hover:text-[#FB2E86]">
+              <RxInstagramLogo className="w-5 h-5" />
+            </a>
+            <a href="#" className="text-gray-900 hover:text-[#FB2E86]">
+              <FaLinkedin className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  );
+};
 
-      
-        </div>
-    );
-  };
-  
-  export default Footer;
-  
+export default Footer;
